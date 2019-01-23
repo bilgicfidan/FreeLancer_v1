@@ -1,0 +1,24 @@
+﻿@using FreeLancer_v1.Models
+@model IEnumerable<Expert>
+@{
+    ViewBag.Title = "HomePage";
+}
+
+<h2>HomePage</h2>
+<hr />
+
+<hr />
+<div class="col-md-4">
+    <table style="width:100%;">
+
+        @foreach (var expert in Model)
+        {
+            <tr>
+                <td>@(expert.name)</td>
+                <td>@(expert.lastname)</td>
+                <td>@(expert.degree)</td>
+            </tr>
+        }
+            
+        </table>
+</div>
