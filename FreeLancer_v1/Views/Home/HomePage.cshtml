@@ -1,24 +1,22 @@
-﻿@using FreeLancer_v1.Models
-@model IEnumerable<Expert>
+﻿
 @{
-    ViewBag.Title = "HomePage";
+    ViewBag.Title = "Anasayfa";
 }
 
-<h2>HomePage</h2>
-<hr />
-
-<hr />
-<div class="col-md-4">
-    <table style="width:100%;">
-
-        @foreach (var expert in Model)
-        {
-            <tr>
-                <td>@(expert.name)</td>
-                <td>@(expert.lastname)</td>
-                <td>@(expert.degree)</td>
-            </tr>
-        }
-            
-        </table>
+<div class="page-header">
+    <div class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <div class="container">
+            <nav class="navbar navbar-light bg-light">
+                <!-- Navbar content -->
+                <a class="navbar-brand" href="#"><h1><span><b>FreeLancer</b></span></h1></a>
+                <button class="btn-lg dl-horizontal bottom-right" type="button" style="background-color:cornflowerblue" onclick="location.href='@Url.Action("Kesfet", "Home")'" >Keşfet</button>
+                <button class="btn-lg dl-horizontal bottom-right" type="button" style="background-color:cornflowerblue" onclick="location.href='@Url.Action("Login", "Home")'">Giriş</button>
+                <button class="btn-lg dl-horizontal bottom-right" type="button" style="background-color:cornflowerblue" onclick="location.href='@Url.Action("SignUp", "Home")'">Kayıt Ol</button>
+                <form class="form-group-lg "></form>
+            </nav>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav"></ul>
+            </div>
+        </div>
+    </div>
 </div>

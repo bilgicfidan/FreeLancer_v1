@@ -41,6 +41,7 @@ namespace FreeLancer_v1.Models
         
         public virtual Expert_Profile Expert_Profile { get; set; }
         public virtual Sub_Category Sub_Category { get; set; }
+        public virtual Category Category { get; set; }
         public virtual List<Comment> Comments { get; set; }
         public virtual List<Message> Messages { get; set; }
         public virtual List<Order> Orders { get; set; }

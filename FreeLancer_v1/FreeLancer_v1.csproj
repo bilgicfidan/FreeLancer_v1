@@ -112,6 +112,21 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Mutlu\apapou.20.jpg" />
+    <Content Include="Mutlu\apdavi.15.jpg" />
+    <Content Include="Mutlu\boylee.4.jpg" />
+    <Content Include="Mutlu\bschap.2.jpg" />
+    <Content Include="Mutlu\cadugd.19.jpg" />
+    <Content Include="Mutlu\dfhodd.1.jpg" />
+    <Content Include="Mutlu\hsgrim.1.jpg" />
+    <Content Include="Mutlu\isbald.15.jpg" />
+    <Content Include="Mutlu\jbierl.20.jpg" />
+    <Content Include="Mutlu\jross.17.jpg" />
+    <Content Include="Mutlu\rhaitk.14.jpg" />
+    <Content Include="Mutlu\sdwall.1.jpg" />
+    <Content Include="Mutlu\sjcutt.1.jpg" />
+    <Content Include="Mutlu\theod.18.jpg" />
+    <Content Include="Mutlu\wjhugh.5.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -124,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ExpertController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -133,6 +149,7 @@
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Expert.cs" />
     <Compile Include="Models\Expert_Profile.cs" />
+    <Compile Include="Models\ViewModelClass.cs" />
     <Compile Include="Models\Managers\DatabaseContext.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Models\Message.cs" />
@@ -150,6 +167,11 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\HomePage.cshtml" />
     <Content Include="Views\Shared\_PartialPageCategory.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Kesfet.cshtml" />
+    <Content Include="Views\Home\SignUp.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -159,6 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Expert\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

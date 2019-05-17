@@ -14,5 +14,7 @@ namespace FreeLancer_v1.ViewModel.HomePageViewModel
         public List<Category> categories { get; set; }
         public List<Sub_Category> sub_cat { get; set; }
         public List<Expert> experts { get; set; }
+        
+
     }
 }

@@ -1,5 +1,7 @@
 ﻿using FreeLancer_v1.Models;
 using FreeLancer_v1.Models.Managers;
+using FreeLancer_v1.ViewModel;
+using FreeLancer_v1.ViewModel.HomePageViewModel;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Validation;
@@ -16,9 +18,35 @@ namespace FreeLancer_v1.Controllers
         // GET: Home
         public ActionResult HomePage()
         {
+            
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            return View();
+        }
+
+        public ActionResult Kesfet()
+        {
             DatabaseContext db = new DatabaseContext();
-            List<Expert> experts = db.Experts.ToList();
-            return View(experts);
+            ViewModelClass viewModelClass = new ViewModelClass();
+            viewModelClass.HomeCategory = db.Categories.ToList();
+            viewModelClass.HomeExpert = db.Experts.ToList();
+            return View(viewModelClass);
+        }
+        public ActionResult SignUp()
+        {
+            return View();
+        }
+        public ActionResult Login()
+        {
+            return View();
         }
     }
 }
