@@ -8,24 +8,27 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-
+      
       @foreach (var item in Model.HomeCategory)
       {
-      <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  @item.name
-              </a>
-              
-              @*<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  @foreach (var item2 in item.sub_cat)
-                  {
-                      <a class="dropdown-item" href="#">@item2.name</a>
-                  }
-              </div>*@
-          </li>
-      </ul>
+          <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" itemscope="@item.CategoryID" >
+                      @item.name
+                  </a>
+
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      @foreach (var item2 in Model.HomeSubCategories.Where
+                          (c => c.topCategoryID == item.CategoryID))
+                      {
+                          
+                          <a class="container-fluid" href="#">@item2.name</a>
+                      }
+                  </div>
+              </li>
+          </ul>
       }
- 
+
+
   </div>
 </nav>

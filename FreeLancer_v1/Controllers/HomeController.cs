@@ -36,6 +36,7 @@ namespace FreeLancer_v1.Controllers
         {
             DatabaseContext db = new DatabaseContext();
             ViewModelClass viewModelClass = new ViewModelClass();
+            viewModelClass.HomeSubCategories = db.Sub_Categories.ToList();
             viewModelClass.HomeCategory = db.Categories.ToList();
             viewModelClass.HomeExpert = db.Experts.ToList();
             return View(viewModelClass);

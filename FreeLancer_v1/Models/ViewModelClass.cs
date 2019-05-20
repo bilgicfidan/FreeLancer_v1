@@ -10,5 +10,6 @@ namespace FreeLancer_v1.Models
         public IEnumerable<Expert> HomeExpert { get; set; }
         public IEnumerable<Category> HomeCategory { get; set; }
         public IEnumerable<Sub_Category> HomeSubCategories { get; set; }
+        public IEnumerable<Member> HomeMembers { get; set; }
     }
 }
