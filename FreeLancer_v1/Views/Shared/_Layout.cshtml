@@ -1,28 +1,140 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
-    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>JEt Hızında Projeler</title>
+    <!-- Bootstrap core CSS -->
+
+    
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+   
+    
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+
+    
+    <link href="~/shop-homepage.css" rel="stylesheet" />
+
+    <!-- Bootstrap core JavaScript -->
+   
+   
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+  
+ 
+    <script src="~/Scripts/bootstrap.min.js"></script>
 </head>
 <body>
-    
-    <div class="container body-content">
-        
-        @RenderBody()
-        
-    </div>
-    <div class="panel-footer">
-        <footer class="bottom-left">
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+        <div class="container">
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+            <a class="navbar-brand" href="#">Projet.com</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            ProJET
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-spoon mr-2"></i>Servis
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-phone mr-1"></i>İletişim
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-address-card mr-2"></i>Hakkımızda
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ">
+                    <li class="mr-2">
+                        <a href="#" class="text-warning">
+                            <i class="fa fa-lock mr-1"></i>Giriş
+                        </a>
+                    </li>
+                    <li class="mr-2">
+                        <a href="#" class="text-warning">
+                            <i class="fa fa-user-plus mr-1"></i>Üye Ol
+                        </a>
+                    </li>
+                    <li class="mr-2">
+                        <a href="#" class="text-warning">
+                            <i class="fa fa-user-circle mr-1"></i>mahmutyazici
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="text-warning">
+                            <i class="fa fa-sign-out mr-2"></i>Çıkış
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    @RenderBody()
+    <!-- /.container -->
+    <!-- Footer -->
+    <footer class="py-5 bg-success text-center text-white">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-lg-4">
+                    <p><h3>Kategoriler</h3></p>
+                    <hr />
+                    <a href="#" class="text-danger"><b>Grafik & Tasarım</b> </a><br />
+                    <a href="#" class="text-danger"><b>İnternet Reklamcılığı</b></a><br />
+                    <a href="#" class="text-danger"><b>Yazı & Çeviri</b></a><br />
+                    <a href="#" class="text-danger"><b>Yazılım & Teknoloji</b></a><br />
+                    <a href="#" class="text-danger"><b>Video & Animasyon</b></a><br />
+                    <a href="#" class="text-danger"><b>İş & Yönetim</b></a><br />
+                    <a href="#" class="text-danger"><b>Ses & Müzik</b></a><br /><hr />
+                </div>
+
+                <div class="col-lg-4">
+                    <p><h3>e-Bülten Üyeliği</h3></p><hr />
+                    Yeni Freelancer'lardan haberdar olmak ve fiyatları takip etmek için e-mail adresinizi ekleyiniz<br /><br /><br />
+                    <input type="text" placeholder="e-posta adresiniz" />
+                    <button type="submit" class="btn btn-danger">Gönder <i class="fa fa-share-square"></i></button>
+                    <br /><br /><br /><hr /><br />
+                    <p><b>Tüm Hakları Saklıdır. &copy; www.ProjeT.com @DateTime.Now.Year</b></p>
+                </div>
+
+                <div class="col-lg-4">
+                    <p><h3>Sosyal İletişim</h3></p>
+                    <hr />
+                    <a href="#" class="text-white">
+                        <i class="fa fa-facebook-square"></i><b> Facebook</b>
+                    </a> <br /><br />
+                    <a href="#" class="text-white">
+                        <i class="fa fa-twitter"></i> <b>Twitter</b>
+                    </a> <br /><br />
+                    <a href="#" class="text-white">
+                        <i class="fa fa-instagram"></i> <b>Instagram</b>
+                    </a><br /><br />
+                    <a href="#" class="text-white">
+                        <i class="fa fa-google-plus"></i> <b>Google Plus</b>
+                    </a><br /><hr />
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </footer>
+
 </body>
 </html>
