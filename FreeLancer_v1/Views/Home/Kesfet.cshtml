@@ -10,32 +10,72 @@
     <!-- STATIC LAYOUT ENDS -->
     
     <div class="body-content">
-        <div class="py-5 bg-white text-center">
-            @foreach (var item in Model.HomeExpert)
+        <hr />
+
+        <h1 class="text-center">@*@Model.HomeCategory.Where(x=>x.CategoryID.Equals(3))*@ Yazılım & Teknoloji</h1>
+        <div class="row py-5 bg-white text-center">
+            @foreach (var item in Model.HomeExpert.Where(x => x.abilityID == 15).Take(3))
             {
-                <div class="col-md-4 bg-primary">
+                <div class="col-md-4">
                     <div class="">
-                        for image
+                        <img src="~/Mutlu/dfhodd.1.jpg" alt="..." class="img-thumbnail" />
                     </div>
                     <div class="text-dark">
-                        @(item.name + "" + item.lastname)
+                        <span class=""></span>
+                        @(item.name + " " + item.lastname)
                     </div>
                     <div class="text-dark">
                         @item.degree
-                    </div>
+                    </div><br />
+                    <div></div>
                 </div>
             }
+        </div>
+        <hr />
 
+        <h1 class="text-center">@Model.HomeCategory.Where(x => x.CategoryID == 4).Select(c => new { c.name }).SingleOrDefault().name </h1>
+        <div class="row py-5 bg-white text-center">
+            @foreach (var item in Model.HomeExpert.Where(x => x.abilityID == 23).Take(3))
+            {
+                <div class="col-lg-4">
+                    <div class="">
+                        <img src="~/Mutlu/dfhodd.1.jpg" alt="..." class="img-thumbnail" />
+                    </div>
+                    <div class="text-dark">
+                        <span class=""></span>
+                        @(item.name + " " + item.lastname)
+                    </div>
+                    <div class="text-dark">
+                        @item.degree
+                    </div><br />
+                    <div></div>
+                </div>
+            }.
         </div>
-        <div class="py-5 bg-white text-center">
-            ladkfhdfljgılitrjsyogtry
+        <hr />
+        <h1 class="text-center">@Model.HomeCategory.Where(x => x.CategoryID == 6).Select(c => new { c.name }).SingleOrDefault().name </h1>
+        <div class="row py-5 bg-white text-center">
+            @foreach (var item in Model.HomeExpert.Where(x => x.abilityID == 42).Take(3))
+            {
+                <div class="col-lg-4">
+                    <div class="">
+                        <img src="~/Mutlu/dfhodd.1.jpg" alt="..." class="img-thumbnail" />
+                    </div>
+                    <div class="text-dark">
+                        <span class=""></span>
+                        @(item.name + " " + item.lastname)
+                    </div>
+                    <div class="text-dark">
+                        @item.degree
+                    </div><br />
+                    <div></div>
+                </div>
+            }.
         </div>
+        <hr />
         <div class="py-5 bg-white text-center">
-            ladkfhdfljgılitrjsyogtry
-        </div>
-        <div class="py-5 bg-white text-center">
-            şdsGJOERHJ  AYPİTRJGHSTHILİSSOPTY9,IHSGFMNHAIOİGUTHYJOSTRH
+            Velit mollis odio sollicitudin lacinia aliquam posuere, sapien elementum lobortis tincidunt, turpis dui ornare nisl, sollicitudin interdum turpis nunc eget sem nulla eu ultricies orci praesent id augue nec lorem pretium congue sit amet ac nunc fusce iaculis lorem eu diam hendrerit at mattis purus dignissim vivamus mauris tellus, fringilla vel dapibus a, blandit quis erat vivamus elementum aliquam luctus etiam fringilla pretium sem vitae sodales mauris id nulla est praesent laoreet, metus vel auctor aliquam, eros purus vulputate leo, eget consequat neque quam id tellus duis ultricies tempor tortor, vitae dignissim ligula mattis nec in hac habitasse platea dictumst.
         </div>
     </div>
-</div>
+    </div>
 

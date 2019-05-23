@@ -13,7 +13,7 @@
       {
           <ul class="navbar-nav">
               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" itemscope="@item.CategoryID">
                       @item.name
                   </a>
 
@@ -22,7 +22,7 @@
                           (c => c.topCategoryID == item.CategoryID))
                       {
                           
-                          <a class="container-fluid" href="#">@item2.name</a>
+                          <a class="container-fluid" href="#" itemscope="@item2.Sub_CategoryID">@item2.name</a>
                       }
                   </div>
               </li>
