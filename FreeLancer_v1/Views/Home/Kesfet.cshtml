@@ -4,14 +4,12 @@
     ViewBag.Title = "Kesfet";
 }
 
-<h2>Kesfet</h2>
 <div class="container">
     @Html.Partial("~/Views/Shared/_PartialPageCategory.cshtml")
     <!-- STATIC LAYOUT ENDS -->
-    
-    <div class="body-content">
-        <hr />
 
+    <div class="body-content" >
+        <hr />
         <h1 class="text-center">@*@Model.HomeCategory.Where(x=>x.CategoryID.Equals(3))*@ Yazılım & Teknoloji</h1>
         <div class="row py-5 bg-white text-center">
             @foreach (var item in Model.HomeExpert.Where(x => x.abilityID == 15).Take(3))
@@ -59,14 +57,15 @@
             {
                 <div class="col-lg-4">
                     <div class="">
-                        <img src="~/Mutlu/dfhodd.1.jpg" alt="..." class="img-thumbnail" />
+                        @Html.Hidden((item.expertID).ToString())
+                        <img src="~/Mutlu/dfhodd.1.jpg" alt="..." class="img-thumbnail" itemscope="@item.expertID" />
                     </div>
                     <div class="text-dark">
                         <span class=""></span>
-                        @(item.name + " " + item.lastname)
+                        @Html.Name(item.name + " " + item.lastname)
                     </div>
                     <div class="text-dark">
-                        @item.degree
+                        @Html.Name(item.degree)
                     </div><br />
                     <div></div>
                 </div>
@@ -77,5 +76,5 @@
             Velit mollis odio sollicitudin lacinia aliquam posuere, sapien elementum lobortis tincidunt, turpis dui ornare nisl, sollicitudin interdum turpis nunc eget sem nulla eu ultricies orci praesent id augue nec lorem pretium congue sit amet ac nunc fusce iaculis lorem eu diam hendrerit at mattis purus dignissim vivamus mauris tellus, fringilla vel dapibus a, blandit quis erat vivamus elementum aliquam luctus etiam fringilla pretium sem vitae sodales mauris id nulla est praesent laoreet, metus vel auctor aliquam, eros purus vulputate leo, eget consequat neque quam id tellus duis ultricies tempor tortor, vitae dignissim ligula mattis nec in hac habitasse platea dictumst.
         </div>
     </div>
-    </div>
+</div>
 

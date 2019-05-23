@@ -13,16 +13,17 @@
       {
           <ul class="navbar-nav">
               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" itemscope="@item.CategoryID">
+                  @Html.ActionLink(item.name, "Category", "Category",new { id = item.CategoryID },new { @class= "nav-link dropdown-toggle",id = "navbarDropdownMenuLink" ,role = "button" ,data_toggle = "dropdown" ,aria_haspopup = "true" ,aria_expanded = "false" })
+                  @*<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" itemscope="@item.CategoryID">
                       @item.name
-                  </a>
+                  </a>*@
 
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <div class="dropdown-menu" >
                       @foreach (var item2 in Model.HomeSubCategories.Where
                           (c => c.topCategoryID == item.CategoryID))
                       {
-                          
-                          <a class="container-fluid" href="#" itemscope="@item2.Sub_CategoryID">@item2.name</a>
+                          @Html.ActionLink(item2.name, "Category", "Category",new { id=item2.Sub_CategoryID},new { @class= "dropdown-item" })
+                          @*<a class="container-fluid" href="#" itemscope="@item2.Sub_CategoryID">@item2.name</a>*@
                       }
                   </div>
               </li>
