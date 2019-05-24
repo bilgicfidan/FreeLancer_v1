@@ -41,13 +41,6 @@ namespace FreeLancer_v1.Controllers
             viewModelClass.HomeExpert = db.Experts.ToList();
             return View(viewModelClass);
         }
-        public ActionResult SignUp()
-        {
-            return View();
-        }
-        public ActionResult Login()
-        {
-            return View();
-        }
+        
     }
 }

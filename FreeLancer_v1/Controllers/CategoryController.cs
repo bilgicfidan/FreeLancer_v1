@@ -19,5 +19,10 @@ namespace FreeLancer_v1.Controllers
               
             return View(experts);
         }
+        public PartialViewResult GetSubCategory(int id)
+        {
+            Sub_Category sub_Category = db.Sub_Categories.Where(x => x.topCategoryID == id).FirstOrDefault();
+            return PartialView("_PartialPageSubCategory", sub_Category);
+        }
     }
 }

@@ -8,7 +8,7 @@
     @Html.Partial("~/Views/Shared/_PartialPageCategory.cshtml")
     <!-- STATIC LAYOUT ENDS -->
 
-    <div class="body-content" >
+    <div class="body-content">
         <hr />
         <h1 class="text-center">@*@Model.HomeCategory.Where(x=>x.CategoryID.Equals(3))*@ Yazılım & Teknoloji</h1>
         <div class="row py-5 bg-white text-center">
@@ -58,7 +58,7 @@
                 <div class="col-lg-4">
                     <div class="">
                         @Html.Hidden((item.expertID).ToString())
-                        <img src="~/Mutlu/dfhodd.1.jpg" alt="..." class="img-thumbnail" itemscope="@item.expertID" />
+                        <img src="~/Mutlu/dfhodd.1.jpg" alt="..." class="img-thumbnail" />
                     </div>
                     <div class="text-dark">
                         <span class=""></span>
@@ -77,4 +77,6 @@
         </div>
     </div>
 </div>
+
+
 
