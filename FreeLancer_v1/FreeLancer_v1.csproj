@@ -108,9 +108,21 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\landing-page.css" />
+    <Content Include="Content\landing-page.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="fonts\all.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\simple-line-icons.css" />
+    <Content Include="free.jpg" />
     <Content Include="Global.asax" />
+    <Content Include="img\background-3.jpg" />
+    <Content Include="img\bg-masthead.jpg" />
+    <Content Include="img\bg-showcase-1.jpg" />
+    <Content Include="img\bg-showcase-2.jpg" />
+    <Content Include="img\Kisiler1.jpg" />
+    <Content Include="img\Kisiler2.jpg" />
+    <Content Include="img\Kisiler3.jpg" />
     <Content Include="Mutlu\apapou.20.jpg" />
     <Content Include="Mutlu\apdavi.15.jpg" />
     <Content Include="Mutlu\boylee.4.jpg" />
@@ -203,8 +215,8 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Kesfet.cshtml" />
-    <Content Include="Views\Home\SignUp.cshtml" />
-    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Account\SignUp.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Expert\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutPage1.cshtml" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
@@ -228,14 +240,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Account\" />
     <Folder Include="Views\Category\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
