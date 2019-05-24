@@ -120,6 +120,9 @@
     <Content Include="img\bg-masthead.jpg" />
     <Content Include="img\bg-showcase-1.jpg" />
     <Content Include="img\bg-showcase-2.jpg" />
+    <Content Include="img\icon1.png" />
+    <Content Include="img\icon2.png" />
+    <Content Include="img\icon3.png" />
     <Content Include="img\Kisiler1.jpg" />
     <Content Include="img\Kisiler2.jpg" />
     <Content Include="img\Kisiler3.jpg" />
