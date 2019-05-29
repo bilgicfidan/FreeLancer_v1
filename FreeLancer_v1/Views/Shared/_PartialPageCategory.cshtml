@@ -20,7 +20,7 @@
 
                     <div class="dropdown-menu">
                         @foreach (var item2 in Model.HomeSubCategories.Where
-                            (c => c.topCategoryID == item.CategoryID))
+            (c => c.topCategoryID == item.CategoryID))
                         {
                             @Html.ActionLink(item2.name, "GetSubCategory", "Category", new { id = item2.Sub_CategoryID }, new { @class = "dropdown-item" })
                             @*<a class="container-fluid" href="#" itemscope="@item2.Sub_CategoryID">@item2.name</a>*@
@@ -33,23 +33,35 @@
 
     </div>
 </nav>
+<style type="text/css">
+    ul.navbar-nav li:hover > .dropdown-menu {
+        display: block;
+    }
+
+    ul.navbar-nav li > .dropdown-menu {
+        display: none;
+    }
+</style>
+<!-- ikiside çalışıyor. hangisini isterseniz kullanın. deyide bitişik yazdım. o deyide bitişik yazdım, bu deyide öyle.. -->
 <script>
-    $(document).ready(function () {
-        $("ul li").on({
-            mouseenter: function () {
-                $("div.dropdown-menu").show()
-            },
-            mouseleave: function () {
-                $("div.dropdown-menu").hide()
-            },
-            click: function () {
-                //kategoriye ait sayfaya yönlendirilecek
-            }
-        });
-    })
+    //$(document).ready(function () {
+    //    $("ul.navbar-nav li").on({
+    //        mouseenter: function () {
+    //            var liItem = $(this).children("div.dropdown-menu");
+    //            liItem.show()
+    //        },
+    //        mouseleave: function () {
+    //            var liItem = $(this).children("div.dropdown-menu");
+    //            liItem.hide()
+    //        },
+    //        click: function () {
+    //            //kategoriye ait sayfaya yönlendirilecek
+    //        }
+    //    });
+    //})
     $(function () { //tıklanan altkategorinin id sini altkategori sayfasına gönderecek
         $("#navbarDropdownMenuLink").click(function () {
-            $.get("/Category/GetSubCategory", function (d) {});
+            $.get("/Category/GetSubCategory", function (d) { });
         });
     });
 
