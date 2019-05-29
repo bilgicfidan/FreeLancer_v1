@@ -1,17 +1,10 @@
-﻿<div id="wrapper">
+﻿@using FreeLancer_v1.Models
+@model ViewModelClass
+
+<div id="wrapper">
 
     <!-- Sidebar -->
-    <div id="sidebar-wrapper" class="col-lg-2">
-        <ul class="sidebar-nav">
-            @foreach (var item in Model.HomeCategory)
-            {
-                <li>
-                    <a href="#">@(item.name)</a>
-                </li>
-            }
-
-        </ul>
-    </div>
+    @Html.Partial("~/Views/Shared/_PartialPageSubCategory.cshtml")
     <!-- /#sidebar-wrapper -->
     <!-- Page Content -->
     <div id="page-content-wrapper">
@@ -22,7 +15,7 @@
                     @foreach (var expert in Model.HomeExpert)
                     {
                         <div class="col-lg-3">
-                            <img src="~/Mutlu/dfhodd.1.jpg" alt="..." class="img-thumbnail" ><br />
+                            <img src="~/Mutlu/dfhodd.1.jpg" alt="..." class="img-thumbnail"><br />
                             @(expert.name)
                             @(expert.lastname)<br />
                             @(expert.degree)<br /><br /><br />

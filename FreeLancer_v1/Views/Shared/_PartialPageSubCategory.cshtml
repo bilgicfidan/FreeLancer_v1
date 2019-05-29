@@ -1,2 +1,16 @@
 ﻿@using FreeLancer_v1.Models
 @model ViewModelClass
+
+
+<div id="sidebar-wrapper" class="col-lg-2">
+    <ul class="sidebar-nav">
+        
+        @foreach (var item in Model.HomeSubCategories)
+        {
+            <li>
+                <a href="#">@(item.name)</a>
+            </li>
+        }
+
+    </ul>
+</div>

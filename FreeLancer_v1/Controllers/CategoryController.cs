@@ -15,9 +15,15 @@ namespace FreeLancer_v1.Controllers
         // GET: Category
         public ActionResult Category(int id)
         {
-            Expert experts = db.Experts.Where(ex => ex.Sub_Category.topCategoryID == id || ex.abilityID==id).FirstOrDefault();
-              
-            return View(experts);
+            ViewModelClass modelClass = new ViewModelClass();
+            var experts = db.Experts.Where(ex => ex.Sub_Category.topCategoryID == id || ex.abilityID==id).Select(s=>new Expert() { abilityID =s.abilityID , name=s.name}).ToList();
+            modelClass.HomeExpert = experts;
+            var sub_Category = db.Sub_Categories.Where(x => x.topCategoryID == id).Select(s => new Sub_Category() { topCategoryID = s.topCategoryID, name = s.name }).ToList();
+            modelClass.HomeSubCategories = sub_Category;
+            //ViewData["kategoriler"] = sub_Category;
+            //ViewData["expertler"] = experts;
+
+            return View(ViewData);
         }
         public PartialViewResult GetSubCategory(int id)
         {

@@ -33,7 +33,7 @@
 
     </div>
 </nav>
-<style type="text/css">
+@*<style type="text/css">
     ul.navbar-nav li:hover > .dropdown-menu {
         display: block;
     }
@@ -41,24 +41,24 @@
     ul.navbar-nav li > .dropdown-menu {
         display: none;
     }
-</style>
+</style>*@
 <!-- ikiside çalışıyor. hangisini isterseniz kullanın. deyide bitişik yazdım. o deyide bitişik yazdım, bu deyide öyle.. -->
 <script>
-    //$(document).ready(function () {
-    //    $("ul.navbar-nav li").on({
-    //        mouseenter: function () {
-    //            var liItem = $(this).children("div.dropdown-menu");
-    //            liItem.show()
-    //        },
-    //        mouseleave: function () {
-    //            var liItem = $(this).children("div.dropdown-menu");
-    //            liItem.hide()
-    //        },
-    //        click: function () {
-    //            //kategoriye ait sayfaya yönlendirilecek
-    //        }
-    //    });
-    //})
+    $(document).ready(function () {
+        $("ul.navbar-nav li").on({
+            mouseenter: function () {
+                var liItem = $(this).children("div.dropdown-menu");
+                liItem.show()
+            },
+            mouseleave: function () {
+                var liItem = $(this).children("div.dropdown-menu");
+                liItem.hide()
+            },
+            click: function () {
+                //kategoriye ait sayfaya yönlendirilecek
+            }
+        });
+    })
     $(function () { //tıklanan altkategorinin id sini altkategori sayfasına gönderecek
         $("#navbarDropdownMenuLink").click(function () {
             $.get("/Category/GetSubCategory", function (d) { });

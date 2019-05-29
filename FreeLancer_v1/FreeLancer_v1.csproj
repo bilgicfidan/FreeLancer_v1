@@ -235,6 +235,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Shared\_PartialPageSubCategory.cshtml" />
     <Content Include="Views\Category\GetSubCategory.cshtml" />
+    <Content Include="Views\Category\Category.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
