@@ -22,7 +22,7 @@
                         @foreach (var item2 in Model.HomeSubCategories.Where
                             (c => c.topCategoryID == item.CategoryID))
                         {
-                            @Html.ActionLink(item2.name, "Category", "Category", new { id = item2.Sub_CategoryID }, new { @class = "dropdown-item" })
+                            @Html.ActionLink(item2.name, "GetSubCategory", "Category", new { id = item2.Sub_CategoryID }, new { @class = "dropdown-item" })
                             @*<a class="container-fluid" href="#" itemscope="@item2.Sub_CategoryID">@item2.name</a>*@
                         }
                     </div>
@@ -34,13 +34,13 @@
     </div>
 </nav>
 <script>
-    $(function () {
-        $("ul li #navbarDropdownMenuLink").on({
+    $(document).ready(function () {
+        $("ul li").on({
             mouseenter: function () {
-                $(".dropdown-menu").show()
+                $("div.dropdown-menu").show()
             },
             mouseleave: function () {
-                $(".dropdown-menu").hide()
+                $("div.dropdown-menu").hide()
             },
             click: function () {
                 //kategoriye ait sayfaya yönlendirilecek
