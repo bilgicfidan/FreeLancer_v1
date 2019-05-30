@@ -19,14 +19,14 @@ namespace FreeLancer_v1.Controllers
         public ActionResult HomePage()
         {
             BusinesLayer.Test ts = new BusinesLayer.Test();
-             
+            ts.InsertTest();
             return View();
         }
 
         public ActionResult About()
         {
             return View();
-        }
+        } 
 
         public ActionResult Contact()
         {
