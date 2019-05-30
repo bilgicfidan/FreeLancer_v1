@@ -16,5 +16,9 @@ namespace FreeLancer_v1.DataAccessLayer
         public DbSet<Comment> dB_Yorumlar { get; set; }
         public DbSet<Liked> dB_Likes { get; set; }
 
+        public DatabaseContext()
+        {
+            Database.SetInitializer(new MyInıtilazier());
+        }
     }
 }
