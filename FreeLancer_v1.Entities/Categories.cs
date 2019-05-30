@@ -15,5 +15,11 @@ namespace FreeLancer_v1.Entities
         public string Title { get; set; }
         [StringLength(150)]
         public string Description  { get; set; }
+
+        public virtual List<Notes> Notlar { get; set; }
+        public Categories()
+        {
+            Notlar = new List<Notes>();
+        }
     }
 }
