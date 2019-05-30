@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FreeLancer_v1.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +11,8 @@ namespace FreeLancer_v1.BusinesLayer
     {
         public Test()
         {
-            DataAccessLayer.DatabaseContext db = new DataAccessLayer.DatabaseContext();
-            db.dB_Kategoriler.ToList();
+            Repository<Categories> repo = new Repository<Categories>();
+            List<Categories> kategorilerim = repo.List();
         }
     }
 }
