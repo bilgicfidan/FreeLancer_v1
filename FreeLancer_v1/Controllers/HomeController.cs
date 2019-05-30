@@ -18,7 +18,8 @@ namespace FreeLancer_v1.Controllers
         // GET: Home
         public ActionResult HomePage()
         {
-            
+            BusinesLayer.Test ts = new BusinesLayer.Test();
+             
             return View();
         }
 

@@ -249,6 +249,16 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FreeLancer_v1.BusinesLayer\FreeLancer_v1.BusinesLayer.csproj">
+      <Project>{4d196db6-8eaa-472c-b27e-d48f9d774f39}</Project>
+      <Name>FreeLancer_v1.BusinesLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FreeLancer_v1.Entities\FreeLancer_v1.Entities.csproj">
+      <Project>{8360eecb-4347-428a-9efd-75e1fa2505a0}</Project>
+      <Name>FreeLancer_v1.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
