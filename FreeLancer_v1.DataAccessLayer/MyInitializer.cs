@@ -42,8 +42,8 @@ namespace FreeLancer_v1.DataAccessLayer
 
             };
 
-            context.Db_Kullanicilar.Add(admin);
-            context.Db_Kullanicilar.Add(normalKul);
+            context.dB_Kullanicilar.Add(admin);
+            context.dB_Kullanicilar.Add(normalKul);
 
             context.SaveChanges();
 
@@ -65,12 +65,12 @@ namespace FreeLancer_v1.DataAccessLayer
 
 
                 };
-                context.Db_Kullanicilar.Add(user);
+                context.dB_Kullanicilar.Add(user);
             }
             context.SaveChanges();
 
             //Kullanıcılar select edilip userList'e atıldı.
-            List<Users> userList = context.Db_Kullanicilar.ToList();
+            List<Users> userList = context.dB_Kullanicilar.ToList();
 
 
             //Categori adding...
@@ -85,7 +85,7 @@ namespace FreeLancer_v1.DataAccessLayer
                     ModifiedUserName = "modifiedMah"
                 };
 
-                context.Db_Kategoriler.Add(cat);
+                context.dB_Kategoriler.Add(cat);
 
                 for (int k = 0; k < FakeData.NumberData.GetNumber(5, 9); k++)
                 {
