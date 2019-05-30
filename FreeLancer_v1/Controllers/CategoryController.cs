@@ -23,7 +23,7 @@ namespace FreeLancer_v1.Controllers
             //ViewData["kategoriler"] = sub_Category;
             //ViewData["expertler"] = experts;
 
-            return View(ViewData);
+            return View(modelClass);
         }
         public PartialViewResult GetSubCategory(int id)
         {
