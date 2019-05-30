@@ -11,7 +11,7 @@ namespace FreeLancer_v1.BusinesLayer
         public Test()
         {
             DataAccessLayer.DatabaseContext db = new DataAccessLayer.DatabaseContext();
-            db.Database.CreateIfNotExists(); 
+            db.dB_Kategoriler.ToList();
         }
     }
 }
